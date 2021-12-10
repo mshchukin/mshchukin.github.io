@@ -1,59 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mikhail Shchukin - Home</title>
 </head>
 <style>
-body {margin:0;}
-
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #333;
-	position: fixed;
-	top: 0;
-	width: 100%;
+h1 {
+	line-height: 30%;
 }
-
-li {
-	float: left;
+.inside_p {
+	text-align: left;
+	margin-left: 30%;
+	margin-right: 30%;
+	line-height: 30%;
 }
-
-li a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
+.inside_list {
+	list-style-position: inside;
+	text-align: left;
+	position: relative;
+	margin-left: 30%;
+	margin-right: 30%;
 }
-
-li a:hover:not(.active) {
-	background-color: #111;
-}
-
-.active {
-	background-color: #04AA6D;
-}
-	
+#main_pic{
+	width: 10%;
+	height: 10%;
+	border: solid;
+}	
 #main_content {
-	background-color:#02011C;
-	color:#010101
+	text-align: center;
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  padding: 3px;
+  background-color: #F5F5F5;
+  color: black;
 }
 </style>
 <body>
 	<div id="main_content">
-		<ul>
-			<li><a class="active" href="#home">Home</a></li>
-			<li><a href="#contact">Contact</a></li>
-			<li><a href="#about">About</a></li>
+		<img id="main_pic" src="img/pic.jpg" alt="Picture">
+		<h1>Mikhail Shchukin</h1>
+		<h2>Contact</h2>
+		<p class="inside_p">
+			Hit the button to get contact info: 
+			<button onclick="
+				var txt;
+				txt+='vla';
+				txt+='dimmi';
+				txt+='@uregina.ca';
+				document.getElementsByClassName('inside_p')[0].innerHTML = txt.replace('undefined','');
+			">Get Email</button>
+		</p>	
+		<h2>Bio</h2>
+		<p class="inside_p">
+			<b>Education:</b>
+		</p>
+		<ul class="inside_list">
+			<li>M.Sc. in Computer Science (University of Regina) - 2021
+				<ul>
+					<li><b>Thesis topic: </b><a href="http://hdl.handle.net/10294/14365" target="_blank">Classification, Quality Analysis and Development of Circuit Design and Simulation Software for Computing Education</a></li>
+				</ul>
+			</li>
+			<li>B.Sc. in Computer Science with Distinction (University of Regina) - 2018</li>
 		</ul>
-		<p>Mikhail Shchukin - personal website.</p>
+		<p class="inside_p">
+			<b>Publications:</b>
+		<ul class="inside_list">
+			<li>
+				<a href="https://arxiv.org/pdf/2102.06943.pdf" target="_blank">Goods Transportation Problem Solving via Routing Algorithm (Shchukin, A. B. Said, en A. L. Teixeira)</a>
+				<ul>
+					<li>
+						<a href="https://github.com/andreloboteixeira/cs820-project" target="_blank">GitHub code repository</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		</p>
+
     	</div>
+
+	<footer>
+			Last edited: 10 December 2021
+	</footer>
 </body>
+<script type="text/javascript">
+
+</script>
 
 </html>
