@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<meta name="keywords" content="Mikhail Shchukin, Mikhail, Shchukin,
+      University of Regina, Regina, Multimedia, Computer Science, 
+	  Digital Systems Architecture, Circuitry, Languages, Signal Processing,
+      Artificial Intelligence">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mikhail Shchukin - Home</title>
 </head>
@@ -9,9 +13,40 @@
 /* For desktop users */
 @media (min-width: 768px){ 
 body {
+	font-family: Consolas,monaco,monospace;
 	background-color: #F5F5F5;
+	margin: 0px;
 	margin-bottom: -5%;
 }
+
+#topnav {
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 10px;
+	background-color: #C2C2C2;
+}
+
+#topnav a {
+	float: left;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+#topnav a:hover {
+	background-color: #DDDDDD;
+	color: white;
+}
+
+#topnav a.active {
+	background-color: #708090;
+	color: white;
+}
+
 .inside_p {
 	text-align: left;
 	margin-right: 15%;
@@ -35,6 +70,50 @@ body {
 .hidden {
 	display: none;
 }
+.flex-container {
+    display: flex;
+	flex-wrap: wrap;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.flex-child {
+    flex: 1;
+	align-self: center;
+}
+
+.flex-child.left{
+	text-align: center;
+}
+
+.flex-child.right{
+	text-align: center;
+}
+
+.collapsible {
+	background-color: #C2C2C2;
+	color: black;
+	cursor: pointer;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	width: 100%;
+	border: none;
+	outline: none;
+	text-align: center;
+	font-size: 16px;
+	font-family: Consolas,monaco,monospace;
+}
+
+.active, .collapsible:hover {
+	background-color: #708090;
+	color: white;
+}
+
+.collapsible-content {
+	display: none;
+	overflow: hidden;
+}
+
 footer {
 	position: sticky;
 	bottom: 0px;
@@ -51,11 +130,43 @@ footer {
 	color: black;
 }
 }
+
 /* For mobile users */
 @media (max-width: 767px){ 
 body {
+	font-family: Consolas,monaco,monospace;
 	background-color: #F5F5F5;
+	margin: 0px;
 }
+
+#topnav {
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 10px;
+	background-color: #C2C2C2;
+}
+
+#topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+#topnav a:hover {
+	background-color: #DDDDDD;
+	color: black;
+}
+
+#topnav a.active {
+	background-color: #708090;
+	color: white;
+}
+
 .inside_p {
 	text-align: left;
 }
@@ -76,6 +187,54 @@ body {
 .hidden {
 	display: none;
 }
+.flex-container {
+    display: flex;
+	flex-wrap: wrap;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.flex-child {
+    flex: 1;
+}
+
+.flex-child.left{
+	text-align: center;
+}
+
+.flex-child.right{
+	text-align: center;
+	
+}
+
+.flex-child:first-child {
+    margin-right: 5px;
+} 
+
+.collapsible {
+	background-color: #C2C2C2;
+	color: black;
+	cursor: pointer;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	width: 100%;
+	border: none;
+	outline: none;
+	text-align: center;
+	font-size: 16px;
+	font-family: Consolas,monaco,monospace;
+}
+
+.active, .collapsible:hover {
+	background-color: #708090;
+	color: black;
+}
+
+.collapsible-content {
+	display: none;
+	overflow: hidden;
+}
+
 footer {
 	position: sticky;
 	bottom: 0px;
@@ -93,80 +252,106 @@ footer {
 
 </style>
 <body>
-	<div id="homepage" class="current_page">
-		<img id="main_pic" src="img/pic.jpg" alt="Picture">
-		<h1>Mikhail Shchukin</h1>
-		<h2>Contact</h2>
-		<p>For general inquiries or to request a CV/Resume, please send me an email (checked daily):</p>
-		<p id="contact">
-			Hit the button to get contact info: 
-			<button onclick=" // eat that, spam bots
-				var
-				t0 ='uregi';
-				t7 ='na.ca';
-				t12 ='immi';
-				t1 ='vlad';
-				t4 ='@';
-				document.getElementById('contact').innerHTML = t1 + t12 + t4 + t0 + t7 ;
-			">Get Email</button>
-		</p>
-		<h2>Bio</h2>
-		<p class="inside_p">
-			<b>Education:</b>
-		</p>
-		<ul class="inside_list">
-			<li>M.Sc. in Computer Science (University of Regina) - 2021
-				<ul>
-					<li><b>Thesis topic: </b><a href="http://hdl.handle.net/10294/14365" target="_blank">Classification, Quality Analysis and Development of Circuit Design and Simulation Software for Computing Education</a></li>
-				</ul>
-			</li>
-			<li>B.Sc. in Computer Science with Distinction (University of Regina) - 2018</li>
-		</ul>
-		<p class="inside_p">
-			<b>Publications:</b>
-		<ul class="inside_list">
-			<li>
-				<a href="https://arxiv.org/pdf/2102.06943.pdf" target="_blank">Goods Transportation Problem Solving via Routing Algorithm (Shchukin, A. B. Said, en A. L. Teixeira)</a>
-				<ul>
-					<li>
-						<a href="https://github.com/andreloboteixeira/cs820-project" target="_blank">GitHub code repository</a>
-					</li>
-				</ul>
-			</li>
-		</ul>
-		<p class="inside_p">
-			<b>Interests:</b>
-		<ul class="inside_list">
-			<li>
-				Learning new languages (machine and human). Currently learned:
-				<ul>
-					<li>
-						Human languages: Russian (native), English (fluent), French
-					</li>
-					<li>
-						Machine languages:
-						<ul>
-							<li>
-								Major programming: C/C++, Delphi/Pascal, FORTH
-							</li>
-							<li>
-								Scripting languages: JavaScript
-							</li>
-							<li>
-								Markup languages: HTML/CSS, LaTeX
-							</li>
-						</ul>
-					</li>
-				</ul>				
-			</li>
-		</ul>
-		</p>
-	<hr>
-    	</div>
-
+	<div id="topnav">
+		<a id="lhome" class="active" href="#" onclick="topnav_switch(this)">Home</a>
+		<a id="lprojects" href="#" onclick="topnav_switch(this)">Projects</a>
+		<a id="lother" href="#" onclick="topnav_switch(this)">Other</a>
+		<a id="labout" href="#" onclick="topnav_switch(this)" >About me</a>
+	</div>
+	<div id="home" class="current_page">
+		<div class="flex-container">
+		  <div class="flex-child left">
+			<img id="main_pic" src="img/pic.jpg" alt="Picture">
+			<h1>Mikhail Shchukin</h1>
+		  </div>
+		  
+		  <div class="flex-child right">
+			<h2>Welcome to Mikhail's Homepage!</h2>
+			<p>This is my personal webpage. I love minimalism where possible, so I took some inspiration from <a href="http://motherfuckingwebsite.com/" target="_blank">some other webpage<a>.</p>
+			<h2>Contact Me</h2>
+			<p>For general inquiries or to request a CV/Resume, please send me an email (checked daily):</p>
+			<p id="contact">
+				Hit the button to get contact info: 
+				<button onclick=" // eat that, spam bots
+					var
+					t0 ='uregi';
+					t7 ='na.ca';
+					t12 ='immi';
+					t1 ='vlad';
+					t4 ='@';
+					document.getElementById('contact').innerHTML = t1 + t12 + t4 + t0 + t7 ;
+				">Get Email</button>
+			</p>
+		  </div>
+		</div>
+		<hr>
+    </div>
+	
 	<div id="projects" class="hidden">
-		<img id="main_pic" src="img/pic.jpg" alt="Picture">
-		<h1>Mikhail Shchukin</h1>
+		<p>This page is under construction! Come back later.</p>
+	</div>
+	
+	<div id="other" class="hidden">
+		<p>This page is under construction! Come back later.</p>
+	</div>
+
+	<div id="about" class="hidden">
+		<p> Here is some stuff about me. Hit the topics you need.</p>
+		<hr>
+		<div class="collapsible">&#x25BC; Biography &#x25BC;</div>
+		<div class="collapsible-content">
+			<p class="inside_p">
+				<b>Education:</b>
+			</p>
+			<ul class="inside_list">
+				<li><a href="https://www.uregina.ca/student/registrar/assets/docs/pdf/convocation-programs/spring-2021-convocation-program.pdf" target="_blank">M.Sc.(Thesis-route) in Computer Science (University of Regina) - 2021</a>
+					<ul>
+						<li><b>Thesis topic: </b><a href="http://hdl.handle.net/10294/14365" target="_blank">Classification, Quality Analysis and Development of Circuit Design and Simulation Software for Computing Education</a></li>
+					</ul>
+				</li>
+				<li>B.Sc. in Computer Science with Distinction (University of Regina) - 2018</li>
+			</ul>
+			<p class="inside_p">
+				<b>Publications:</b>
+			<ul class="inside_list">
+				<li>
+					<a href="https://arxiv.org/pdf/2102.06943.pdf" target="_blank">Goods Transportation Problem Solving via Routing Algorithm (Shchukin, A. B. Said, en A. L. Teixeira)</a>
+					<ul>
+						<li>
+							<a href="https://github.com/mshchukin/Goods-Transportation-Project" target="_blank">GitHub code repository</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<p class="inside_p">
+				<b>Interests:</b>
+			<ul class="inside_list">
+				<li>
+					Learning new languages (machine and human); Currently learned:
+					<ul>
+						<li>
+							Human languages: Russian (native), English (fluent), French
+						</li>
+						<li>
+							Machine languages:
+							<ul>
+								<li>
+									Major programming: C/C++, Delphi/Pascal, FORTH
+								</li>
+								<li>
+									Scripting languages: JavaScript
+								</li>
+								<li>
+									Markup languages: HTML/CSS, LaTeX
+								</li>
+							</ul>
+						</li>
+					</ul>				
+				</li>
+			</ul>
+			</p>
+		</div>
+		<hr>
 	</div>
 
 	<footer>
@@ -174,6 +359,34 @@ footer {
 	</footer>
 </body>
 <script type="text/javascript">
+// the collapsible code, adapted from w3schools.com
+var coll = document.getElementsByClassName('collapsible');
+
+for (let i = 0; i < coll.length; i++) {
+  coll[i].addEventListener('click', function() {
+    this.classList.toggle('active');
+    var content = document.getElementsByClassName('collapsible-content')[i];
+    if (content.style.display == 'block') {
+      content.style.display = 'none';
+    } else {
+      content.style.display = 'block';
+    }
+  });
+}
+// interactive topnav links helper
+function topnav_switch(node) {
+	if(!node.classList.contains('active')) {
+		document.getElementsByClassName('current_page')[0].classList.add('hidden');
+		document.getElementsByClassName('current_page')[0].classList.remove('current_page');
+		var others = node.parentElement.querySelectorAll('.active');
+		for (let i = 0; i < others.length; i++) {
+			others[i].classList.remove('active');
+		}
+		node.classList.add('active');
+	}
+	document.getElementById(node.id.replace('l','')).classList.add('current_page');
+	document.getElementById(node.id.replace('l','')).classList.remove('hidden');
+}
 
 </script>
 
