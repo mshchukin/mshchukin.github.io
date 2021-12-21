@@ -135,6 +135,7 @@ footer {
 @media (max-width: 767px){ 
 body {
 	font-family: Consolas,monaco,monospace;
+	font-size: 12px;
 	background-color: #F5F5F5;
 	margin: 0px;
 }
@@ -154,7 +155,6 @@ body {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	font-size: 17px;
 }
 
 #topnav a:hover {
@@ -169,6 +169,8 @@ body {
 
 .inside_p {
 	text-align: left;
+	margin-left: 2%;
+	margin-right: 2%;	
 }
 .inside_list {
 	list-style-position: inside;
@@ -255,6 +257,7 @@ footer {
 	<div id="topnav">
 		<a id="lhome" class="active" href="#" onclick="topnav_switch(this)">Home</a>
 		<a id="lprojects" href="#" onclick="topnav_switch(this)">Projects</a>
+		<a id="lteaching" href="#" onclick="topnav_switch(this)">Teaching</a>
 		<a id="lother" href="#" onclick="topnav_switch(this)">Other</a>
 		<a id="labout" href="#" onclick="topnav_switch(this)" >About me</a>
 	</div>
@@ -267,36 +270,162 @@ footer {
 		  
 		  <div class="flex-child right">
 			<h2>Welcome to Mikhail's Homepage!</h2>
-			<p>This is my personal webpage. I love minimalism where possible, so I took some inspiration from <a href="http://motherfuckingwebsite.com/" target="_blank">some other webpage<a>.</p>
+			<p>This is my personal webpage. I like minimalism where possible, including websites.</p>	
+			<!-- <a href="http://motherfuckingwebsite.com/" target="_blank">A lovely website that inspired this<a> -->
 			<h2>Contact Me</h2>
-			<p>For general inquiries or to request a CV/Resume, please send me an email (checked daily):</p>
 			<p id="contact">
 				Hit the button to get contact info: 
 				<button onclick=" // eat that, spam bots
 					var
 					t0 ='uregi';
-					t7 ='na.ca';
+					t7 ='ac.an';
 					t12 ='immi';
 					t1 ='vlad';
 					t4 ='@';
-					document.getElementById('contact').innerHTML = t1 + t12 + t4 + t0 + t7 ;
+					document.getElementById('contact').innerHTML = t1 + t12 + t4 + t0 + t7.split('').reverse().join('');
 				">Get Email</button>
 			</p>
+			<p>For general inquiries or to request a CV/Resume, please send me an email (checked daily).</p>
 		  </div>
 		</div>
 		<hr>
     </div>
 	
 	<div id="projects" class="hidden">
-		<p>This page is under construction! Come back later.</p>
+		<p class="inside_p">
+			Here are some projects I have worked on:
+			<ul class="inside_list">
+				<li>
+					<a href="https://www.rcmpstudy.ca/" target="_blank">RCMP</a> + <a href="https://www.saskptsistudy.ca/" target="_blank">PSP PTSI</a> PTSD Studies: Moodle-based clinical communication tool
+				<ul class="inside_list">
+					<li>
+						Government of Canada research project
+					</li>
+					<li>
+						Source code is under non-disclosure agreement
+					</li>
+				</ul>
+				</li>
+				<li>
+					<a href="https://github.com/mshchukin/LaTeX-inventory-templates" target="_blank">LaTeX template collection</a> for business inventory management
+				</li>
+				<li>
+					<a href="https://github.com/mshchukin/Home-Automation-System" target="_blank">Home Automation Prototype (Arduino)</a>
+				</li>
+				<li>
+					<a href="https://github.com/mshchukin/Appointer" target="_blank">Appointer</a> - Booking website (with back-end) for a small business
+				</li>
+			</ul>
+		</p>
+		<hr>
+	</div>
+	
+	<div id="teaching" class="hidden">
+		<p class="inside_p">
+			I taught the following courses/labs for Department of Computer Science at University of Regina:
+			<ul class="inside_list">
+				<li>
+					<a href="https://www.cs.uregina.ca/Links/class-info/301" target="_blank">CS 301: Digital Systems Architecture (Lab)</a>
+				</li>
+				<li>
+					<a href="https://www.cs.uregina.ca/Links/class-info/301" target="_blank">CS 201: Digital Systems Architecture (Class + Lab)</a>
+				</li>
+				<li>
+					<a href="https://www.cs.uregina.ca/Links/class-info/115/" target="_blank">CS 115: Object-Oriented Design (Class)</a>
+				</li>
+			</ul>
+			Student reviews (non-moderated) available at my <a href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=2503476" target="_blank">RateMyProfessor page</a>.
+			<hr>			
+			At the start of 2020 pandemic, I developed a set of teaching videos for several lab courses:
+			<hr>
+			<div class="collapsible">&#x25BC; CS 201 Lab videos &#x25BC;</div>
+			<div class="collapsible-content">
+					<p><b>CS 201 "Introduction to Digital Systems and MIPS Assembly Language" lab videos:</b></p>
+					<ul class="inside_list">
+						<li>
+							<a href="https://youtu.be/tME8IIDu_qg" target="_blank">Introduction to Logisim</a>
+						</li>
+						<li>
+							<a href="https://youtu.be/JtEZ5EjCd88" target="_blank">Combinational Circuits</a>
+						</li>
+						<li>
+							<a href="https://youtu.be/Y0rSDJh4-Ho" target="_blank">Adders and Subtractors</a>
+						</li>
+						<li>
+							<a href="https://youtu.be/EAiOS2xdiaA" target="_blank">Sequential Design</a>
+						</li>
+						<li>
+							<a href="https://youtu.be/expzguy03e4" target="_blank">Sequential Adders and Subtractors</a>
+						</li>
+						<li>
+							<a href="https://youtu.be/BaOc2mLnTnM" target="_blank">Multiplier Circuit</a>
+						</li>
+						<li>
+							<a href="https://youtu.be/16isaFWJLtI" target="_blank">Introduction to SPIM (with basic I/O)</a>
+						</li>
+						<li>
+							<a href="https://youtu.be/MkN0ald7-IE" target="_blank">Arithmetic Operations and Debugging</a>
+						</li>
+						<li>
+							<a href="https://youtu.be/KDmny5IqLCo" target="_blank">SPIM Control Flow Structures</a>
+						</li>
+						<li>
+							<a href="https://youtu.be/5IPVVtQYSIg" target="_blank">SPIM Procedure Calls</a>
+						</li>
+						<li>
+							<a href="https://youtu.be/_HJ8YzCVmuk" target="_blank">SPIM Addressing Modes and Arrays</a>
+						</li>
+					</ul>
+			</div>
+			<hr>
+			<div class="collapsible">&#x25BC; CS 301 Lab videos &#x25BC;</div>
+			<div class="collapsible-content">
+				<p><b>CS 301 "Digital Systems Architecture" lab videos:</b></p>
+				<ul class="inside_list">
+					<li>
+						<a href="https://youtu.be/yEFsVGafY_U" target="_blank">Logisim review: 4-bit shift register circuit</a>
+					</li>
+					<li>
+						<a href="https://youtu.be/4fQLqqOPMHc" target="_blank">Build a 2-Bit CPU</a>
+					</li>
+					<li>
+						<a href="https://youtu.be/80_nZgVaqkg" target="_blank">Build an 8-Bit CPU with a memory</a>
+					</li>
+					<li>
+						<a href="https://youtu.be/j2gdltXfxLg" target="_blank">Run code in the newly created 8-Bit CPU</a>
+					</li>
+					<li>
+						<a href="https://youtu.be/au1CRJ45csE" target="_blank">Intro to ARM Assembly Language and Keil uVision 5</a>
+					</li>
+					<li>
+						<a href="https://youtu.be/nkcVx9Fkrdg" target="_blank">ARM Data Processing Instructions</a>
+					</li>
+					<li>
+						<a href="https://youtu.be/MNQCX6HjBBc" target="_blank">ARM Flow Control Instructions</a>
+					</li>
+					<li>
+						<a href="https://youtu.be/EBNKnSYMETk" target="_blank">ARM Addressing Modes</a>
+					</li>
+					<li>
+						<a href="https://youtu.be/7YJ3V4hJiIU" target="_blank">ARM Subroutine and Stack</a>
+					</li>
+				</ul>
+			</div>
+			<hr>
+			I collaborated with my fellow lecturer <a href="https://trevortomesh.github.io/" target="_blank">Trevor Tomesh</a> on creation of a super cool <a href="https://github.com/trevortomesh/assignmentTemplate" target="_blank">LaTeX University Assignment Template</a>.
+			<br>
+			One of my former CS 115 students made made a video motvated by one of my homework assignments, enjoy: <a href="https://www.youtube.com/watch?v=0TD482lQ6jk" target="_blank">Functional code.mp4</a>
+		</p>
+		<hr>
 	</div>
 	
 	<div id="other" class="hidden">
 		<p>This page is under construction! Come back later.</p>
+		<hr>
 	</div>
 
 	<div id="about" class="hidden">
-		<p> Here is some stuff about me. Hit the topics you need.</p>
+		<p> Here is some information about me. Hit the topics you need.</p>
 		<hr>
 		<div class="collapsible">&#x25BC; Biography &#x25BC;</div>
 		<div class="collapsible-content">
@@ -307,21 +436,12 @@ footer {
 				<li><a href="https://www.uregina.ca/student/registrar/assets/docs/pdf/convocation-programs/spring-2021-convocation-program.pdf" target="_blank">M.Sc.(Thesis-route) in Computer Science (University of Regina) - 2021</a>
 					<ul>
 						<li><b>Thesis topic: </b><a href="http://hdl.handle.net/10294/14365" target="_blank">Classification, Quality Analysis and Development of Circuit Design and Simulation Software for Computing Education</a></li>
+						<li><b>Research Supervisor: </b><a href="http://www2.cs.uregina.ca/~gerhard/" target="_blank">Dr. David Gerhard</a></li>
+						<li><b>Thesis Defense Committee: </b><a href="https://uregina.ca/~volodin/" target="_blank">Dr. Andrei Volodin</a> and <a href="http://www2.cs.uregina.ca/~mouhoubm/" target="_blank">Dr. Malek Mouhoub</a> </li>
+						
 					</ul>
 				</li>
 				<li>B.Sc. in Computer Science with Distinction (University of Regina) - 2018</li>
-			</ul>
-			<p class="inside_p">
-				<b>Publications:</b>
-			<ul class="inside_list">
-				<li>
-					<a href="https://arxiv.org/pdf/2102.06943.pdf" target="_blank">Goods Transportation Problem Solving via Routing Algorithm (Shchukin, A. B. Said, en A. L. Teixeira)</a>
-					<ul>
-						<li>
-							<a href="https://github.com/mshchukin/Goods-Transportation-Project" target="_blank">GitHub code repository</a>
-						</li>
-					</ul>
-				</li>
 			</ul>
 			<p class="inside_p">
 				<b>Interests:</b>
@@ -339,7 +459,10 @@ footer {
 									Major programming: C/C++, Delphi/Pascal, FORTH
 								</li>
 								<li>
-									Scripting languages: JavaScript
+									Assembly languages: MIPS, ARM
+								</li>
+								<li>
+									Scripting languages: PHP/SQL, JavaScript
 								</li>
 								<li>
 									Markup languages: HTML/CSS, LaTeX
@@ -348,8 +471,28 @@ footer {
 						</li>
 					</ul>				
 				</li>
+				<li>
+					General troubleshooting, task automation and problem-solving
+				</li>
 			</ul>
 			</p>
+		</div>
+		<hr>
+		<div class="collapsible">&#x25BC; Publications &#x25BC;</div>
+		<div class="collapsible-content">
+			<p class="inside_p">
+				<b>Publications:</b>
+			<ul class="inside_list">
+				<li>
+					<a href="https://arxiv.org/pdf/2102.06943.pdf" target="_blank">Goods Transportation Problem Solving via Routing Algorithm (Shchukin, A. B. Said, en A. L. Teixeira)</a>
+					<ul>
+						<li>
+							<a href="https://github.com/mshchukin/Goods-Transportation-Project" target="_blank">GitHub code repository</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			</p>			
 		</div>
 		<hr>
 	</div>
